@@ -1,0 +1,24 @@
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.container-fluid {
+  background-color: blue;
+}
+
+.card {
+  width: 300px !important;
+  margin: 1em;
+}
+
+.card img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.personnalcenter {
+  display: flex;
+  justify-content: center;
+}
