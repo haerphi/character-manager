@@ -10,7 +10,7 @@ export async function axiosGet(url: string) {
 
 export async function axiosDelete(id: string) {
   return await axios
-    .delete(`https://character-database.becode.xyz/characters/:${url}`)
+    .delete(`https://character-database.becode.xyz/characters/:${id}`)
     .then(rep => {
       return rep.data;
     });
