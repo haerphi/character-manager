@@ -11,7 +11,7 @@
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="../create/create.css" />
     <title>Character Manager</title>
   </head>
 
@@ -23,7 +23,19 @@
     </div>
 
     <div class="container">
-      <div class="row personnalcenter"></div>
+      <div class="row personnalcenter">
+        <div class="card" width="100px" height="100px">
+          <input type="text" placeholder="Picture of your hero">
+          <div class="card-body">
+              <input type="text" placeholder="Hero name" id="hero-name">
+              <input type="text" placeholder="Short description" id="short-desc">
+              <br>
+              <textarea id="text"></textarea>
+              <br>
+              <a href="#" class="btn btn-primary">Create</a>
+
+        </div>
+      </div>
     </div>
   </body>
 </html>
