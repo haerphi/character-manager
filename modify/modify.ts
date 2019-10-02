@@ -32,9 +32,9 @@ postBTN.addEventListener("click", () => {
   const longdesc: String = (<HTMLInputElement>(
     document.querySelector("#long-desc")
   )).value;
-  const image = (<HTMLInputElement>document.querySelector("#image")).files;
-  console.log(image);
-  if (typeof image != "undefined") {
+  const image = (<HTMLInputElement>document.querySelector("#input-image"))
+    .files;
+  if (image.length > 0) {
     console.log("Hello");
     const file = image[0];
     let reader = new FileReader();
@@ -47,9 +47,9 @@ postBTN.addEventListener("click", () => {
         image: split[1]
       };
       console.log(data);
-      /* axiosPut(id, data).then(() => {
-      window.location.href = "../";
-    }); */
+      axiosPut(id, data).then(() => {
+        window.location.href = "../";
+      });
     };
     reader.readAsDataURL(file);
   } else {
@@ -62,10 +62,11 @@ postBTN.addEventListener("click", () => {
       name: name,
       description: longdesc,
       shortDescription: shortdesc,
-      image: img.src
+      image: img.src.split(",")[0]
     };
     console.log(data);
-    /* axiosPut(id, data).then(() => {
-    window.location.href = "../"; */
+    axiosPut(id, data).then(() => {
+      window.location.href = "../";
+    });
   }
 });

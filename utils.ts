@@ -25,7 +25,7 @@ export async function axiosPost(data) {
 
 export async function axiosPut(id: string, data) {
   return await axios.put(
-    `https://character-database.becode.xyz/characters/]${id}`,
+    `https://character-database.becode.xyz/characters/${id}`,
     data
   );
 }
