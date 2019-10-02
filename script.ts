@@ -23,7 +23,7 @@ function buildCards(table): void {
                 <h5 class="card-title text-center name">${element.name}</h5>
                 <p class="card-text text-center short-desc">${element.shortDescription}</p>
                 <div class="text-center">
-                    <a href="#" class="btn btn-primary">Modify</a>
+                    <a href="./modify/modify.html?id=${element.id}" class="btn btn-primary">Modify</a>
                     <button type="button" value=${element.id} class="btn btn-primary deleteButton">Delete</button>
                 </div>
                 <input type="hidden" class="charac-id" value="${element.id}" >
