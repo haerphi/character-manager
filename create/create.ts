@@ -12,10 +12,10 @@ postBTN.addEventListener("click", () => {
     document.querySelector("#long-desc")
   )).value;
 
-  const image = document.querySelector("#image").files[0];
+  const image = (<HTMLInputElement>document.querySelector("#image")).files[0];
   let reader = new FileReader();
   reader.onloadend = function() {
-    let split = reader.result.split(",");
+    let split = (<string>reader.result).split(",");
     const data = {
       name: name,
       description: longdesc,
