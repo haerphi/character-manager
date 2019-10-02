@@ -22,3 +22,10 @@ export async function axiosPost(data) {
     data
   );
 }
+
+export async function axiosPut(id: string, data) {
+  return await axios.put(
+    `https://character-database.becode.xyz/characters/]${id}`,
+    data
+  );
+}
