@@ -1,4 +1,18 @@
-import { axiosGet } from "./utils";
+import { axiosGet, axiosDelete } from "./utils";
+
+function activeButton(): void {
+  const bts: NodeListOf<Element> = document.querySelectorAll(".deleteButton");
+  bts.forEach(el => {
+    el.addEventListener("click", () => {
+      const id: string = (<HTMLInputElement>el).value;
+      if (confirm("Voulez-vous vraiment supprimer cette élement ?")) {
+        axiosDelete(id).then(() => {
+          document.location.reload(true);
+        });
+      }
+    });
+  });
+}
 
 function buildCards(table): void {
   console.log(table);
@@ -10,7 +24,7 @@ function buildCards(table): void {
                 <p class="card-text text-center short-desc">${element.shortDescription}</p>
                 <div class="text-center">
                     <a href="#" class="btn btn-primary">Modify</a>
-                    <a href="#" class="btn btn-primary">Delete</a>
+                    <button type="button" value=${element.id} class="btn btn-primary deleteButton">Delete</button>
                 </div>
                 <input type="hidden" class="charac-id" value="${element.id}" >
             </div>
@@ -18,6 +32,7 @@ function buildCards(table): void {
     let target: HTMLElement = document.querySelector(".personnalcenter");
     target.innerHTML += temp;
   });
+  activeButton();
 }
 
 axiosGet("").then(rep => {
