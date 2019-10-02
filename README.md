@@ -9,7 +9,7 @@ Lien vers le [résultat]()
 
 ## Problèmes rencontrés
 
-Nous avons rencontré des problèmes de comptabilité avec TypeScript. En effet, par défaut 
+Nous avons rencontré des problèmes de comptabilité avec TypeScript et des petits soucis au niveau du typage de certaines fonctions et variables.
 
 ## Technologies utilisées
 
@@ -24,3 +24,4 @@ Nous avons rencontré des problèmes de comptabilité avec TypeScript. En effet,
 ## Team
 
 *  [Maxime](https://github.com/Maxime-Cao) 
+*  [Philippe](https://github.com/haerphi)
