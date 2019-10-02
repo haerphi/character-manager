@@ -15,3 +15,10 @@ export async function axiosDelete(id: string) {
       return rep.data;
     });
 }
+
+export async function axiosPost(data) {
+  return await axios.post(
+    `https://character-database.becode.xyz/characters`,
+    data
+  );
+}
