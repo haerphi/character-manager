@@ -25,7 +25,7 @@
     <div class="container">
       <div class="row personnalcenter">
         <div class="card" width="100px" height="100px">
-          <input type="file" accept="image/png, image/jpeg">
+          <input type="file" accept="image/png, image/jpeg" id="image">
           <div class="card-body">
               <input type="text" placeholder="Hero name" id="hero-name">
               <input type="text" placeholder="Short description" id="short-desc">
@@ -33,10 +33,11 @@
               <textarea id="long-desc"></textarea>
               <br>
               <a href="../index.html" class="btn btn-primary">Back to home</a>
-              <a href="#" class="btn btn-primary">Confirm</a>
+              <button type="button" class="btn btn-primary postBTN">Confirm</button>
 
         </div>
       </div>
     </div>
+    <script src="create.js"></script>
   </body>
 </html>
