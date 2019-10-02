@@ -1,3 +1,26 @@
+h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5em;
+}
+
+.container-fluid {
+  background-color: blue;
+}
+
+.card {
+  display: flex;
+  text-align: center;
+  width: 28.75em !important;
+  margin: 1em;
+}
+
+.personnalcenter {
+  display: flex;
+  justify-content: center;
+}
+
 textarea {
-  margin-top: 50px;
+  width: 24.6875em;
+  height: 9.375em;
 }
