@@ -4,7 +4,7 @@ function buildCards(table): void {
   console.log(table);
   table.forEach(element => {
     let temp: string = `<div class="card" width="100px" height="100px">
-            <img src="data:image/gif;base64,${element.image}" alt="Image vide">
+            <a href="./single/single.html?id=${element.id}"><img src="data:image/gif;base64,${element.image}" alt="Image vide"></a>
             <div class="card-body">
                 <h5 class="card-title text-center name">${element.name}</h5>
                 <p class="card-text text-center short-desc">${element.shortDescription}</p>
